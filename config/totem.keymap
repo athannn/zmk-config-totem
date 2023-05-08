@@ -63,7 +63,7 @@
 
         combo_osk_tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12 13>;
+            key-positions = <11 12 10>;
         };
 
         combo_osk_rgui {
