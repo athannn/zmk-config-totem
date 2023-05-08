@@ -38,7 +38,7 @@
 
         combo_enter {
             bindings = <&kp ENTER>;
-            key-positions = <29 28>;
+            key-positions = <28 18>;
         };
 
         combo_osk_lctrl {
