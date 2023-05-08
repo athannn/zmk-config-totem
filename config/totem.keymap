@@ -67,7 +67,7 @@
         };
 
         new_combo {
-            bindings = <&kp undefined>;
+            bindings = <&kp ENTER>;
             key-positions = <28 18>;
         };
     };
