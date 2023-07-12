@@ -11,8 +11,8 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
 #define NAV  1
@@ -41,34 +41,9 @@
             key-positions = <28 29>;
         };
 
-        combo_osk_lctrl {
-            bindings = <&sk LCTRL>;
-            key-positions = <1 2>;
-        };
-
-        combo_osk_lalt {
-            bindings = <&sk LEFT_ALT>;
-            key-positions = <18 17>;
-        };
-
-        combo_osk_lgui {
-            bindings = <&sk LEFT_GUI>;
-            key-positions = <22 23>;
-        };
-
-        combo_osk_rctrl {
-            bindings = <&sk RCTRL>;
-            key-positions = <8 7>;
-        };
-
         combo_osk_tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12 10>;
-        };
-
-        new_combo {
-            bindings = <&kp ENTER>;
-            key-positions = <28 18>;
+            key-positions = <21 22>;
         };
     };
 
@@ -86,6 +61,44 @@
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
+        };
+    };
+
+    behaviors {
+        ctrl_j: ctrl_j {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_J";
+            bindings = <&kp J>;
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+        gui_s: gui_s {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GUI_S";
+            bindings = <&kp S>;
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+        ctrl_f: ctrl_f {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_F";
+            bindings = <&kp F>;
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+        alt_d: alt_d {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_D";
+            bindings = <&kp D>;
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+        alt_k: alt_k {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_K";
+            bindings = <&kp K>;
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
     };
 
